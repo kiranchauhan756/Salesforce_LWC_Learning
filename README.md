@@ -3,3 +3,4 @@
 2. One Way Binding(from JS to HTML) -> oneWayBindingComp
 3. Two Way Binding(from HTML to JS) -> twoWayBinding
 4. Tab Navigation in LWC -> tabNavigationComp
+5. Calculator for basic operations (+,-,/,*) -> calcualtorComp

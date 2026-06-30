@@ -1,0 +1,43 @@
+<template>
+    <lightning-card>
+        <div class="slds-grid slds-grid_align-center slds-grid_vertical-align-center slds-size_1-of-1">
+            <div class="slds-no-flex slds-grid slds-grid_vertical-align-center">
+                <lightning-icon icon-name="utility:duration_downscale" variant="base" size="small"
+                    class="slds-var-m-right_x-small">
+                </lightning-icon>
+                <strong>Calculator</strong>
+            </div>
+        </div>
+
+        <div slot="actions">
+            <lightning-button-group>
+                <lightning-button label="Add" variant="Success" onclick={handleAddition}></lightning-button>
+                <lightning-button label="Sub" variant="Destructive" onclick={handleSubtraction}></lightning-button>
+                <lightning-button label="Mul" variant="Brand" onclick={handleMultiplication}></lightning-button>
+                <lightning-button label="Div" variant="Neutral" onclick={handleDivision}></lightning-button>
+            </lightning-button-group>
+        </div>
+
+        <div slot="footer" lwc:if={isShowResult}>
+
+            <p class={resultClass}>
+                <strong>Result : {result}</strong>
+            </p>
+
+        </div>
+        <div slot="footer" lwc:else>
+            <p class="slds-text-heading_small slds-text-color_error">
+                <strong>Error: Invalid Result</strong>
+            </p>
+        </div>
+        
+
+        <div class="slds-box slds-theme_default">
+            <!-- Card Body  -->
+            <lightning-input type="number" label="Enter First Number" name="firstNumber"
+                onchange={handleFirstNumberChange} placeholder="First number"></lightning-input>
+            <lightning-input type="number" label="Enter Second Number" name="secondNumber"
+                onchange={handleSecondNumberChange} placeholder="secondNumber"></lightning-input>
+        </div>
+    </lightning-card>
+</template>
