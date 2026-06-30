@@ -1,0 +1,14 @@
+<template>
+    <div class="slds-box slds-theme_default">
+        <lightning-input label="Full Name" name="fullName" onchange={handleOnChange} value={fullName} placeholder="Full name"></lightning-input>
+        <lightning-input 
+          type="email" 
+          label="Email" name="email" onchange={handleOnChange} placeholder="email" value={email}
+        ></lightning-input>
+    </div>
+    <div class="preview">
+        <h2>Live Preview</h2>
+      <p>FullName: {fullName}</p>
+      <p>Email: {email}</p>
+    </div>
+</template>
