@@ -1,0 +1,20 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+      <div slot="title">
+          Arrow vs Callback
+      </div>
+      <div slot="actions">
+         <lightning-button-group>
+           <lightning-button label="Using Callback" icon-name="utility:refresh" onclick={handleCallback}></lightning-button>
+           <lightning-button label="Using Arrow" icon-name="utility:refresh" onclick={handleArrow}></lightning-button>
+           <lightning-button label="Using LocalVariable" icon-name="utility:refresh" onclick={handleLocalVariable}></lightning-button>
+           <lightning-button label="Using Bind" icon-name="utility:refresh" onclick={handleBind}></lightning-button>
+         </lightning-button-group>
+      </div>
+     
+      <div class="slds-box slds-theme_default">
+        <!-- Card Body  -->
+        <span>{todaysdate}</span>
+      </div>
+    </lightning-card>
+</template>
